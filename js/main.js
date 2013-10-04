@@ -1,7 +1,16 @@
 var Game = {};
-
 Game.FIXCSS = {};
 Game.SaveManager = {};
+
+Game.Data = {
+    const: {
+        COOKIE_STRING: 'Game_DiseaseFactory_cookie'
+    },
+    playerName: ''
+};
+
+
+
 
 Game.SaveManager.Save = function() {
     var DATA;
@@ -9,20 +18,17 @@ Game.SaveManager.Save = function() {
 };
 
 
-Game.Data = {
-    const: {
-        COOKIE_STRING: 'Game_DiseaseFactory_cookie'
-    }
-};
+
 
 
 Game.Start = function() {
+    Game.FIXCSS.AutoFix();
+
 
 };
 Game.FIXCSS.AutoFix = function() {
 
 };
-$(document).ready(function (){
-    Game.FIXCSS();
+$(document).ready(function() {
     Game.Start();
 });
